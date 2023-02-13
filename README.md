@@ -1,24 +1,32 @@
-# zendesk-api-ticket-script
+# Zendesk API Ticket Script
 
+## Introduction
 
-Change ZDURL, ZDUSER and ZDAPIKEY
+The Zendesk API Ticket Script is a PHP script that utilizes curl to create tickets in Zendesk. It contains two functions: one that generates a JSON object that fits the Zendesk ticket layout, and a second function that sends a curl request to Zendesk and creates a ticket from the output of the first function.
 
-The default json object layout for a ticket is:
+## Configuration
 
-		$create = json_encode(
+Before using the script, make sure to change the ZDURL, ZDUSER, and ZDAPIKEY variables to match your Zendesk account information. 
+
+## Default JSON Object Layout
+
+The default JSON object layout for a Zendesk ticket is as follows:
+```
+$ticket = json_encode(
 			array(
 				'ticket' => array(
-					'subject' => SUBJECT,
-					'comment' => array(
-						"body" => "Body of the ticket"
-						),
-					'requester' => array(
-						"name" => Requester name,
-						"email" => Requester email
-					),
-					'tags' => array(
-						Tags
-					),
-				)
+				'subject' => SUBJECT,
+				'comment' => array(
+					"body" => "Body of the ticket"
+				),
+				'requester' => array(
+					"name" => Requester name,
+					"email" => Requester email
+				),
+				'tags' => array(
+					Tags
+				),
 			)
-		);
+	)
+);
+```
