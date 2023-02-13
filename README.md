@@ -1,12 +1,12 @@
-# Zendesk API Ticket Script
+# Zendesk API Ticket Class
 
 ## Introduction
 
-The Zendesk API Ticket Script is a PHP script that utilizes curl to create tickets in Zendesk. It contains two functions: one that generates a JSON object that fits the Zendesk ticket layout, and a second function that sends a curl request to Zendesk and creates a ticket from the output of the first function.
+The Zendesk API Ticket Class is a PHP class that utilizes curl to create tickets in Zendesk. It contains two functions: one that generates a JSON object that fits the Zendesk ticket layout, and a second function that sends a curl request to Zendesk and creates a ticket from the output of the first function.
 
 ## Configuration
 
-Before using the script, make sure to change the ZDURL, ZDUSER, and ZDAPIKEY variables to match your Zendesk account information. 
+Before using the class, make sure to change the ZDURL, ZDUSER, and ZDAPIKEY variables to match your Zendesk account information. 
 
 ## Default JSON Object Layout
 
